@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        // primarySwatch: Colors.red,
+        primaryColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: '布局'),
@@ -34,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     // 图片
     Widget imageSection = new Container(
-      padding: EdgeInsets.only(top: 8),
+      padding: EdgeInsets.only(top: 0),
       child: Image.asset('images/timg.jpeg',
         height: 240.0,
         fit: BoxFit.cover,
@@ -104,6 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     // 按钮行创建
     Widget buttonSection = Container(
+        color: Colors.white,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -116,6 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     // 正文创建
     Widget textSection = Container(
+      color: Colors.white,
       padding: EdgeInsets.fromLTRB(32, 40, 32, 0),
       child: Text('今天是个好日子,心想的事情都能成.今天是个好日子,心想的事情都能成.今天是个好日子,心想的事情都能成.今天是个好日子,心想的事情都能成.今天是个好日子,心想的事情都能成.今天是个好日子,心想的事情都能成.今天是个好日子,心想的事情都能成.')
     );
@@ -124,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      
+      backgroundColor: Colors.grey[100],
       body: ListView (
         
         children: [
